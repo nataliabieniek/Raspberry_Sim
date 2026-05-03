@@ -1,0 +1,142 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #15202b;
+  background:
+    radial-gradient(circle at top left, rgba(248, 212, 96, 0.35), transparent 28%),
+    linear-gradient(135deg, #f4efe6 0%, #e6f1f2 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(21, 32, 43, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  margin: 0.2rem 0 0;
+  color: #41515f;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nav-link {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #15202b;
+  background: rgba(21, 32, 43, 0.06);
+}
+
+.nav-link-active {
+  background: #15202b;
+  color: #ffffff;
+}
+
+.page-content {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(21, 32, 43, 0.1);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 16px 40px rgba(21, 32, 43, 0.08);
+}
+
+.hero-card {
+  margin-top: 0.5rem;
+}
+
+.page-kicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a5a00;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-box {
+  padding: 1.2rem;
+  border-radius: 20px;
+  background: #f8fbfb;
+  border: 1px solid rgba(21, 32, 43, 0.08);
+}
+
+.simple-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.app-footer {
+  padding: 1.25rem 2rem 2rem;
+  color: #41515f;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .main-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+  }
+
+  .page-content {
+    width: min(100% - 1rem, 1100px);
+    padding-top: 1rem;
+  }
+
+  .page-card {
+    padding: 1.25rem;
+  }
+}
