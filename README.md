@@ -22,6 +22,35 @@ Ogólny szkielet projektu pod aplikację REST z trzema głównymi ekranami:
 - `backend/app/schemas` - schematy wejścia/wyjścia.
 - `backend/database/users` - migracje, seed i zapytania pod bazę użytkowników.
 
+## Sposob uruchomienia
+
+1. Przejdz do katalogu projektu:
+
+```bash
+cd /home/user/Projects/Raspberry_Sim
+```
+
+2. Uruchom caly stack (frontend + backend + baza danych):
+
+```bash
+docker compose up --build
+```
+
+3. Adresy aplikacji po uruchomieniu:
+- frontend: http://localhost:5173
+- backend API: http://localhost:8000
+- endpoint zdrowia: http://localhost:8000/health
+- baza PostgreSQL: localhost:5432
+
+4. Zatrzymanie uslug:
+
+```bash
+docker compose down
+```
+
+Uwaga:
+- Domyslnie frontend korzysta z API pod adresem http://localhost:8000/api
+
 ## Listy zadan
 - [x] Wygenerowanie szablonu - Natalia
 - [ ] Stworzyc header z menu

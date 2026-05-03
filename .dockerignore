@@ -1,0 +1,11 @@
+.git
+.gitignore
+node_modules
+npm-debug.log
+dist
+.vscode
+.DS_Store
+backend/__pycache__
+backend/.pytest_cache
+backend/.mypy_cache
+backend/.venv
