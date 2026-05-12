@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AppLayout } from '../layouts/AppLayout';
+import { AboutPage } from '../pages/AboutPage';
 import { LessonPage } from '../pages/lesson_page/LessonPage';
 import { LoginPage } from '../pages/login_page/LoginPage';
 import { WelcomePage } from '../pages/welcome_page/WelcomePage';
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: 'lesson',
         element: <LessonPage />,
+      },
+      {
+        path: 'o-stronie',
+        element: <AboutPage />,
       },
     ],
   },
