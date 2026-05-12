@@ -57,7 +57,7 @@ Uwaga:
 - [ ] Stworzyc footer
 - [ ] Stworzyc strone glowna 
 - [ ] Stworzyc strone z logowaniem
-- [ ] Stworzyć ogolny szablon strony edukacyjnej
+- [ ] Stworzyć ogolny szablon strony edukacyjnej - Natalia
 - [ ] Stworzyc cześć terminala pod względem frontendu
 - [ ] Stworzyć część symulacji mikrokontrolera, przyciksu i jednej ledy zewnetrzej i wewnętrznej pod względem frontendu
 - [ ] Integracja Hotjar
