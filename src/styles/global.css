@@ -72,9 +72,13 @@ body {
 }
 
 .page-content {
-  width: min(1100px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 2rem 0 3rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-content-wide {
+  width: 100%;
 }
 
 .page-card {
@@ -132,8 +136,8 @@ body {
   }
 
   .page-content {
-    width: min(100% - 1rem, 1100px);
-    padding-top: 1rem;
+    width: 100%;
+    padding-top: 0;
   }
 
   .page-card {

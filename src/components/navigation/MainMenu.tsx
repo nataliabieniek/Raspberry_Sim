@@ -2,8 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 const menuItems = [
   { to: '/', label: 'Powitanie' },
-  { to: '/edukacja', label: 'Glowna edukacyjna' },
-  { to: '/o-stronie', label: 'O stronie' },
+  { to: '/login', label: 'Logowanie' },
+  { to: '/lesson', label: 'Lekcje' },
 ];
 
 export function MainMenu() {

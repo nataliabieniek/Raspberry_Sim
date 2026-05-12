@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AppLayout } from '../layouts/AppLayout';
-import { AboutPage } from '../pages/AboutPage';
-import { EducationPage } from '../pages/EducationPage';
-import { WelcomePage } from '../pages/WelcomePage';
+import { LessonPage } from '../pages/lesson_page/LessonPage';
+import { LoginPage } from '../pages/login_page/LoginPage';
+import { WelcomePage } from '../pages/welcome_page/WelcomePage';
 
 export const router = createBrowserRouter([
   {
@@ -14,12 +14,12 @@ export const router = createBrowserRouter([
         element: <WelcomePage />,
       },
       {
-        path: 'edukacja',
-        element: <EducationPage />,
+        path: 'login',
+        element: <LoginPage />,
       },
       {
-        path: 'o-stronie',
-        element: <AboutPage />,
+        path: 'lesson',
+        element: <LessonPage />,
       },
     ],
   },

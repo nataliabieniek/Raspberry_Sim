@@ -38,6 +38,7 @@ docker compose up --build
 
 3. Adresy aplikacji po uruchomieniu:
 - frontend: http://localhost:5173
+- strona lekcji: http://localhost:5173/lesson
 - backend API: http://localhost:8000
 - endpoint zdrowia: http://localhost:8000/health
 - baza PostgreSQL: localhost:5432
