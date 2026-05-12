@@ -38,6 +38,7 @@ docker compose up --build
 
 3. Adresy aplikacji po uruchomieniu:
 - frontend: http://localhost:5173
+- strona lekcji: http://localhost:5173/lesson
 - backend API: http://localhost:8000
 - endpoint zdrowia: http://localhost:8000/health
 - baza PostgreSQL: localhost:5432
@@ -57,7 +58,7 @@ Uwaga:
 - [ ] Stworzyc footer
 - [ ] Stworzyc strone glowna 
 - [ ] Stworzyc strone z logowaniem
-- [ ] Stworzyć ogolny szablon strony edukacyjnej
+- [ ] Stworzyć ogolny szablon strony edukacyjnej - Natalia
 - [ ] Stworzyc cześć terminala pod względem frontendu
 - [ ] Stworzyć część symulacji mikrokontrolera, przyciksu i jednej ledy zewnetrzej i wewnętrznej pod względem frontendu
 - [ ] Integracja Hotjar
