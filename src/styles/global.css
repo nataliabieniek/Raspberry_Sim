@@ -257,9 +257,42 @@ body {
 }
 
 .app-footer {
-  padding: 1.25rem 2rem 2rem;
-  color: #41515f;
-  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.app-footer-inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100.9px;
+  width: min(100%, 1280px);
+  min-height: 61px;
+  margin: 0 auto;
+  padding: 16px 32px;
+}
+
+.app-footer-brand {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.app-footer-note {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: right;
 }
 
 @media (max-width: 720px) {

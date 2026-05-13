@@ -27,19 +27,19 @@ export function LessonPage() {
 
   useEffect(() => {
     const handlePointerMove = (event: PointerEvent) => {
-      if (!isDragging || !simulatorRef.current || !popupRef.current) {
+      if (!isDragging || !popupRef.current) {
         return;
       }
 
-      const simRect = simulatorRef.current.getBoundingClientRect();
       const popupRect = popupRef.current.getBoundingClientRect();
+      const headerHeight = 64;
       const minX = 8;
-      const minY = 8;
-      const maxX = simRect.width - popupRect.width - 8;
-      const maxY = simRect.height - popupRect.height - 8;
+      const minY = headerHeight + 8;
+      const maxX = window.innerWidth - popupRect.width - 8;
+      const maxY = window.innerHeight - popupRect.height - 8;
 
-      const nextX = event.clientX - simRect.left - dragOffsetRef.current.x;
-      const nextY = event.clientY - simRect.top - dragOffsetRef.current.y;
+      const nextX = event.clientX - dragOffsetRef.current.x;
+      const nextY = event.clientY - dragOffsetRef.current.y;
 
       setPopupPos({
         x: Math.max(minX, Math.min(nextX, maxX)),
