@@ -241,10 +241,10 @@
 }
 
 .lesson-theory-panel {
-  position: absolute;
+  position: fixed;
   left: 28px;
-  top: 28px;
-  width: min(390px, calc(100% - 56px));
+  top: calc(64px + 28px);
+  width: 390px;
   border: 1px solid var(--lesson-accent-soft);
   border-radius: 8px;
   background: #fff;
