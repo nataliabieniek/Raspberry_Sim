@@ -12,16 +12,16 @@
   display: grid;
   grid-template-columns: minmax(520px, 1fr) minmax(520px, 1fr);
   width: 100%;
-  height: clamp(700px, calc(100vh - 165px), 960px);
+  height: 100%;
   border: 1px solid rgba(30, 41, 59, 0.25);
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   background: #0f172a;
 }
 
 .lesson-ide-side {
   display: grid;
-  grid-template-rows: 46px 1fr 120px;
+  grid-template-rows: 40px 1fr 120px;
   background: var(--lesson-ide-bg);
   border-right: 1px solid #334155;
   min-width: 0;
@@ -29,9 +29,13 @@
 
 .lesson-ide-topbar {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 0 16px;
+  gap: 242.14px;
+  width: 100%;
+  height: 40px;
   background: var(--lesson-ide-top);
 }
 
@@ -70,11 +74,54 @@
   cursor: pointer;
 }
 
+.lesson-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lesson-action-button {
+  border: 0;
+  border-radius: 0;
+  background: var(--lesson-accent);
+  color: #fff;
+  font: 700 10px/10px Inter, sans-serif;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  height: 20px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
 .lesson-editor-wrapper {
   display: grid;
   grid-template-rows: 30px 1fr;
   min-height: 0;
   border-top: 1px solid rgba(15, 23, 42, 0.35);
+}
+
+.lesson-editor-body {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  min-height: 0;
+}
+
+.lesson-line-numbers {
+  background: #1a2641;
+  color: #64748b;
+  border-right: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 16px 8px 16px 6px;
+  font: 400 15px/1.7 'JetBrains Mono', monospace;
+  text-align: right;
+  user-select: none;
+  overflow: hidden;
+}
+
+.lesson-line-number {
+  display: block;
 }
 
 .lesson-editor-label {
@@ -258,6 +305,216 @@
   box-shadow: 0 32px 55px -18px rgba(0, 0, 0, 0.4);
 }
 
+/* Minimalizowany panel - tylko header */
+.lesson-theory-panel-minimized {
+  box-sizing: border-box;
+  position: fixed;
+  width: 255.25px;
+  height: 34.67px;
+  background: #a60036;
+  border: 1px solid #e4bdbf;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 12px;
+  z-index: 10;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  padding: 0;
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-drag-handle:active {
+  cursor: grabbing;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-header-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex: 1;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-drag-handle h2 {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  color: #f3f3f3;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-btn-minimize {
+  display: none;
+}
+
+.lesson-theory-panel-minimized .lesson-theory-btn-maximize {
+  width: 16px;
+  height: 16px;
+}
+
+/* Zmaksymalizowany panel - 80% body */
+.lesson-theory-panel-maximized {
+  position: fixed !important;
+  left: 10% !important;
+  top: calc(64px + 10%) !important;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Resize handles - krawędzie */
+.lesson-theory-panel-maximized-resize-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  cursor: ns-resize;
+  background: transparent;
+  z-index: 15;
+}
+
+.lesson-theory-panel-maximized-resize-top:hover {
+  background: rgba(166, 0, 54, 0.2);
+}
+
+.lesson-theory-panel-maximized-resize-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  background: transparent;
+  z-index: 15;
+}
+
+.lesson-theory-panel-maximized-resize-right:hover {
+  background: rgba(166, 0, 54, 0.2);
+}
+
+.lesson-theory-panel-maximized-resize-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  cursor: ns-resize;
+  background: transparent;
+  z-index: 15;
+}
+
+.lesson-theory-panel-maximized-resize-bottom:hover {
+  background: rgba(166, 0, 54, 0.2);
+}
+
+.lesson-theory-panel-maximized-resize-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  background: transparent;
+  z-index: 15;
+}
+
+.lesson-theory-panel-maximized-resize-left:hover {
+  background: rgba(166, 0, 54, 0.2);
+}
+
+/* Resize handles - narożniki */
+.lesson-theory-panel-maximized-resize-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  cursor: nwse-resize;
+  background: transparent;
+  z-index: 16;
+}
+
+.lesson-theory-panel-maximized-resize-top-left:hover {
+  background: linear-gradient(135deg, rgba(166, 0, 54, 0.4) 50%, transparent 50%);
+}
+
+.lesson-theory-panel-maximized-resize-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  cursor: nesw-resize;
+  background: transparent;
+  z-index: 16;
+}
+
+.lesson-theory-panel-maximized-resize-top-right:hover {
+  background: linear-gradient(-135deg, rgba(166, 0, 54, 0.4) 50%, transparent 50%);
+}
+
+.lesson-theory-panel-maximized-resize-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  cursor: nesw-resize;
+  background: transparent;
+  z-index: 16;
+}
+
+.lesson-theory-panel-maximized-resize-bottom-left:hover {
+  background: linear-gradient(-135deg, transparent 50%, rgba(166, 0, 54, 0.4) 50%);
+}
+
+.lesson-theory-panel-maximized-resize-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  cursor: nwse-resize;
+  background: transparent;
+  z-index: 16;
+}
+
+.lesson-theory-panel-maximized-resize-bottom-right:hover {
+  background: linear-gradient(135deg, transparent 50%, rgba(166, 0, 54, 0.4) 50%);
+}
+
+.lesson-theory-panel-maximized .lesson-theory-drag-handle {
+  flex-shrink: 0;
+  cursor: default;
+}
+
+.lesson-theory-panel-maximized .lesson-theory-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
 .lesson-theory-drag-handle {
   display: flex;
   align-items: baseline;
@@ -270,6 +527,48 @@
 
 .lesson-theory-drag-handle:active {
   cursor: grabbing;
+}
+
+.lesson-theory-header-left {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.lesson-theory-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.lesson-theory-btn-minimize,
+.lesson-theory-btn-maximize {
+  background: none;
+  border: none;
+  color: #fff;
+  font: 600 18px/24px Inter, sans-serif;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+}
+
+.lesson-theory-btn-minimize:hover,
+.lesson-theory-btn-maximize:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lesson-theory-btn-minimize:active,
+.lesson-theory-btn-maximize:active {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .lesson-theory-drag-handle h2 {
