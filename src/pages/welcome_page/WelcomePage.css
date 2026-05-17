@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;700;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Root page ---------- */
+.welcomePage {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 3251px;
+  background: linear-gradient(0deg, #F7F9FB, #F7F9FB), #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  isolation: isolate;
+}
+
+/* ---------- Main ---------- */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+}
+
+/* ---------- Hero Section ---------- */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+  isolation: isolate;
+  width: 100%;
+  min-height: 819px;
+  height: 1461.59px;
+  background: #FFFFFF;
+  position: relative;
+  order: 0;
+}
+
+.heroGradient {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, #A60036 2.95%, rgba(166, 0, 54, 0) 2.95%);
+  opacity: 0.05;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 100%;
+  max-width: 1232px;
+  height: 357.59px;
+  z-index: 2;
+}
+
+.heroSpacer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 12px;
+}
+
+.heroHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  max-width: 896px;
+  height: 120px;
+}
+
+.heroTitle {
+  width: 100%;
+  max-width: 742.11px;
+  height: 120px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #191C1E;
+  margin: 0;
+}
+
+.heroSubtitleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6.9px 0px 0.69px;
+  width: 100%;
+  max-width: 672px;
+  height: 65.59px;
+}
+
+.heroSubtitle {
+  width: 100%;
+  max-width: 669.78px;
+  height: 58px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #606B80;
+  margin: 0;
+}
+
+.heroButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 0px 0px;
+  gap: 23.99px;
+  width: 100%;
+  height: 88px;
+}
+
+.btnPrimary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 17.5px 40px 18.5px;
+  width: 290.88px;
+  height: 64px;
+  background: #A60036;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimaryText {
+  width: 210.88px;
+  height: 28px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btnSecondary {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 40px;
+  width: 282.8px;
+  height: 64px;
+  border: 2px solid #A60036;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btnSecondaryText {
+  width: 198.8px;
+  height: 28px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #A60036;
+}
+
+/* ---------- Hero Media ---------- */
+.heroMedia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 0px 0px;
+  width: 100%;
+  max-width: 1024px;
+  height: 1104px;
+}
+
+.heroImageWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  max-width: 1024px;
+  height: 1024px;
+  background: rgba(255, 255, 255, 0.002);
+  border: 1px solid rgba(228, 189, 191, 0.3);
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 
+  PLACE YOUR REAL HERO IMAGE IN: public/hero.png
+  Then this will render correctly.
+  Until then, a grey placeholder is shown.
+*/
+.heroImage {
+  width: 100%;
+  height: 1022px;
+  background-color: #e5e7eb;
+  background-image: url('/hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Section - Technical Features Grid ---------- */
+.featuresSection {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 96px 0px;
+  width: 100%;
+  min-height: 1115.97px;
+  background: #F2F4F6;
+  border-top: 1px solid rgba(228, 189, 191, 0.2);
+  order: 1;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 24px;
+  gap: 128px;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+}
+
+.featureRow {
+  position: relative;
+  width: 100%;
+  max-width: 1232px;
+  height: 466px;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 40px;
+  gap: 24px;
+  position: absolute;
+  height: 359px;
+  left: 0px;
+  right: 648px;
+  top: 53.5px;
+}
+
+.featureLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 349px;
+  height: 18px;
+}
+
+.featureLabelIcon {
+  width: 18px;
+  height: 18px;
+  background: #A60036;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.featureLabelText {
+  width: 323px;
+  height: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #A60036;
+}
+
+.featureHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 39px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  align-items: center;
+  color: #191C1E;
+  margin: 0;
+}
+
+.featureDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 78px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  align-items: center;
+  color: #606B80;
+  margin: 0;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0px 0px;
+  gap: 16px;
+  width: 100%;
+  height: 112px;
+  list-style: none;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+  height: 24px;
+}
+
+.featureItemIcon {
+  margin-top: 4px;
+  width: 11.67px;
+  height: 11.67px;
+  background: #A60036;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.featureItemText {
+  height: 24px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #191C1E;
+  flex: 1;
+}
+
+.featureImageCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  position: absolute;
+  height: 466px;
+  left: 648px;
+  right: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  border: 1px solid rgba(228, 189, 191, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* 
+  PLACE YOUR REAL SIMULATOR SCREENSHOT IN: public/simulator.png
+  Then this will render correctly.
+  Until then, a grey placeholder is shown.
+*/
+.featureImage {
+  width: 100%;
+  height: 400px;
+  background-color: #e5e7eb;
+  background-image: url('/simulator.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+
+/* ---------- Interactive IDE ---------- */
+.ideRow {
+  position: relative;
+  width: 100%;
+  max-width: 1232px;
+  height: 328.97px;
+}
+
+.ideBlock {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  isolation: isolate;
+  position: absolute;
+  height: 328.97px;
+  left: 0px;
+  right: 648px;
+  top: 0px;
+  background: #2D3133;
+  border: 1px solid #334155;
+  border-radius: 4px;
+}
+
+.ideShadow {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: rgba(255, 255, 255, 0.002);
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ideHeader {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 0px 8px;
+  gap: 8px;
+  width: 100%;
+  height: 25px;
+  border-bottom: 1px solid #334155;
+  z-index: 1;
+}
+
+.ideDotRed,
+.ideDotYellow,
+.ideDotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.ideDotRed { background: #EF4444; }
+.ideDotYellow { background: #EAB308; }
+.ideDotGreen { background: #22C55E; }
+
+.ideTitle {
+  margin-left: 8px;
+  height: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #94A3B8;
+}
+
+.idePre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3px 0px 4.8px;
+  width: 100%;
+  height: 237.97px;
+  margin: 0;
+  z-index: 2;
+}
+
+.ideCode {
+  width: 100%;
+  height: 230.17px;
+  font-family: 'Liberation Mono', 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFDADC;
+  white-space: pre;
+}
+
+.ideCode .c-pink { color: #FFDADC; }
+.ideCode .c-cyan { color: #56F5F8; }
+
+.ideText {
+  position: absolute;
+  height: 281px;
+  left: 648px;
+  right: 0px;
+  top: 23.98px;
+  gap: 24px;
+  padding: 0px;
+}
+
+.ideSubfeatures {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.ideSubfeature {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 0px 16px;
+  gap: 4px;
+  width: 50%;
+  border-left: 2px solid #A60036;
+}
+
+.ideSubfeatureTitle {
+  width: 100%;
+  height: 28px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #191C1E;
+  margin: 0;
+}
+
+.ideSubfeatureDesc {
+  width: 100%;
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #606B80;
+  margin: 0;
+}
+
+/* ---------- CTA Section ---------- */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 96px 24px;
+  width: 100%;
+  min-height: 548.6px;
+  background: #FFFFFF;
+  order: 2;
+}
+
+.ctaBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 32px;
+  gap: 22.9px;
+  width: 100%;
+  max-width: 1232px;
+  min-height: 356.6px;
+  background: #A60036;
+  border-radius: 8px;
+}
+
+.ctaHeading {
+  width: 100%;
+  max-width: 1168px;
+  height: 39px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.ctaDesc {
+  width: 100%;
+  max-width: 672px;
+  height: 75.8px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.ctaButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 48px;
+  isolation: isolate;
+  width: 436px;
+  height: 68px;
+  background: #FFFFFF;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.ctaShadow {
+  position: absolute;
+  left: 0px;
+  right: 0.23px;
+  top: 0px;
+  bottom: 0px;
+  background: rgba(255, 255, 255, 0.002);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ctaButtonText {
+  width: 279px;
+  height: 28px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #A60036;
+  z-index: 1;
+}
