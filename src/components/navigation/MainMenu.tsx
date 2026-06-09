@@ -12,7 +12,7 @@ const menuItems = [
       { to: '/lesson-2', label: 'Lekcja 2' },
     ],
   },
-  { to: '/o-stronie', label: 'O stronie' },
+  { to: '/propozycja', label: 'Dodaj lekcje' },
 ];
 
 export function MainMenu() {
