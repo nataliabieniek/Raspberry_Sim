@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './WelcomePage.css';
 
 export function WelcomePage() {
@@ -18,9 +19,9 @@ export function WelcomePage() {
               </p>
             </div>
             <div className="heroButtons">
-              <button className="btnPrimary">
+              <Link to="/lesson" className="btnPrimary">
                 <span className="btnPrimaryText">Rozpocznij naukę</span>
-              </button>
+              </Link>
               <button className="btnSecondary">
                 <span className="btnSecondaryText">Przegląd Lekcji</span>
               </button>
@@ -130,10 +131,10 @@ export function WelcomePage() {
             <p className="ctaDesc">
               Ucz się MicroPythona na żywo. Koduj, testuj i obserwuj efekty w pełnym środowisku w przeglądarce.
             </p>
-            <button className="ctaButton">
+            <Link to="/lesson" className="ctaButton">
               <span className="ctaShadow" aria-hidden="true" />
               <span className="ctaButtonText">Rozpocznij naukę</span>
-            </button>
+            </Link>
           </div>
         </section>
       </main>

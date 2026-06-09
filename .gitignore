@@ -2,6 +2,7 @@ node_modules/
 
 # Build artifacts
 /dist/
+.vite/
 
 # Windows metadata files
 *:Zone.Identifier
