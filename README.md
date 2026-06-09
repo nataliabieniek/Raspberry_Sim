@@ -52,24 +52,3 @@ docker compose down
 Uwaga:
 - Domyslnie frontend korzysta z API pod adresem http://localhost:8000/api
 
-## Listy zadan
-- [x] Wygenerowanie szablonu - Natalia
-- [ ] Stworzyc header z menu
-- [ ] Stworzyc footer
-- [ ] Stworzyc strone glowna 
-- [ ] Stworzyc strone z logowaniem
-- [ ] Stworzyć ogolny szablon strony edukacyjnej - Natalia
-- [ ] Stworzyc cześć terminala pod względem frontendu
-- [ ] Stworzyć część symulacji mikrokontrolera, przyciksu i jednej ledy zewnetrzej i wewnętrznej pod względem frontendu
-- [ ] Integracja Hotjar
-- [ ] Integracja Google Analytics
-- [ ] Stworzenie w frontend przycikow w sekcji edukacyjnej do podpowiedzi, uruchomienia kodu, sprawdzenia zadania
-
-
-### Zadania low-prority
-- [ ] Stworzyc strone "O stronie"
-- [ ] Ciemny mode
-- [ ] Dodanie funkcjonalnosći podpowiedzi
-- [ ] Dodanie weryfikacji kodu
-- [ ] Dodanie swiecenia diody
-- [ ] Dodanie reakcji na przycisk

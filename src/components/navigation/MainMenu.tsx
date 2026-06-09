@@ -8,7 +8,8 @@ const menuItems = [
   {
     label: 'Lekcje',
     submenu: [
-      { to: '/lesson', label: 'Lesson 1' },
+      { to: '/lesson', label: 'Lekcja 1' },
+      { to: '/lesson-2', label: 'Lekcja 2' },
     ],
   },
   { to: '/o-stronie', label: 'O stronie' },
