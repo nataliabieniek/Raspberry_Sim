@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import type { ChangeEvent, PointerEvent as ReactPointerEvent } from 'react';
-import { LessonOne } from './lessons/lesson_one/LessonOne';
+import { LessonTwo } from './lessons/lesson_two/LessonTwo';
 import picoBoardImage from '../../../3643332-40.jpg';
 import './lesson-page.css';
 
-export function LessonPage() {
+export function LessonTwoPage() {
   const footerHeight = 61;
   const minimizedPanelHeight = 35;
   const minimizedPanelBottomOffset = 12;
@@ -14,21 +14,23 @@ export function LessonPage() {
       'from machine import Pin',
       'import utime',
       '',
-      '# Initialize onboard LED on GPIO 25',
-      'led = Pin(25, Pin.OUT)',
+      '# Przycisk na GPIO12, zewnetrzna LED na GPIO15',
+      'button = Pin(12, Pin.IN, Pin.PULL_DOWN)',
+      'external_led = Pin(15, Pin.OUT)',
       '',
       'while True:',
-      '    led.value(1)  # LED ON',
-      '    utime.sleep(0.5)',
-      '    led.value(0)  # LED OFF',
-      '    utime.sleep(0.5)',
+      '    if button.value() == 1:',
+      '        external_led.value(1)  # przycisk wcisniety',
+      '    else:',
+      '        external_led.value(0)  # przycisk puszczony',
+      '    utime.sleep(0.05)',
     ].join('\n'),
   );
   const [popupPos, setPopupPos] = useState({ x: 32, y: 120 });
   const [isDragging, setIsDragging] = useState(false);
   const [isMinimized, setIsMinimized] = useState(true);
   const [isMaximized, setIsMaximized] = useState(false);
-  const [isRectLedOn, setIsRectLedOn] = useState(true);
+  const [isRectLedOn] = useState(false);
   const [isExternalLedOn, setIsExternalLedOn] = useState(false);
   const [isButtonPressed, setIsButtonPressed] = useState(false);
   const [isLessonCompletedPopupOpen, setIsLessonCompletedPopupOpen] = useState(false);
@@ -149,17 +151,12 @@ export function LessonPage() {
 
   useEffect(() => {
     if (!isCodeRunning) {
+      setIsExternalLedOn(false);
       return;
     }
 
-    const blinkInterval = window.setInterval(() => {
-      setIsRectLedOn((previousState) => !previousState);
-    }, 500);
-
-    return () => {
-      window.clearInterval(blinkInterval);
-    };
-  }, [isCodeRunning]);
+    setIsExternalLedOn(isButtonPressed);
+  }, [isCodeRunning, isButtonPressed]);
 
   const handleDragStart = (event: ReactPointerEvent<HTMLElement>) => {
     if (!popupRef.current) {
@@ -315,15 +312,12 @@ export function LessonPage() {
                   className={`lesson-breadboard-button${isButtonPressed ? ' is-pressed' : ''}`}
                   onPointerDown={() => {
                     setIsButtonPressed(true);
-                    setIsExternalLedOn(true);
                   }}
                   onPointerUp={() => {
                     setIsButtonPressed(false);
-                    setIsExternalLedOn(false);
                   }}
                   onPointerLeave={() => {
                     setIsButtonPressed(false);
-                    setIsExternalLedOn(false);
                   }}
                   aria-label="Przycisk na plytce stykowej GPIO12"
                   title="GPIO12: przytrzymaj, aby zapalic zewnetrzna diode na GPIO15"
@@ -438,7 +432,7 @@ export function LessonPage() {
           </header>
           {!isMinimized && (
             <div className="lesson-theory-content">
-              <LessonOne />
+              <LessonTwo />
             </div>
           )}
           {isMaximized && (

@@ -1,0 +1,29 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" rx="20" fill="#0B132B"/>
+  <rect x="44" y="44" width="1112" height="432" rx="14" fill="#111827" stroke="#334155" stroke-width="2"/>
+
+  <text x="84" y="98" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Sygnal przycisku (GPIO12)</text>
+
+  <line x1="100" y1="390" x2="1090" y2="390" stroke="#64748B" stroke-width="3"/>
+  <line x1="100" y1="150" x2="100" y2="390" stroke="#64748B" stroke-width="3"/>
+
+  <text x="58" y="160" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="22">HIGH</text>
+  <text x="62" y="396" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="22">LOW</text>
+  <text x="1070" y="430" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="20">czas</text>
+
+  <path d="M120 390H260V160H430V390H620V160H810V390H1050" stroke="#F43F5E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="260" y="100" width="170" height="40" rx="8" fill="#1E293B" stroke="#475569"/>
+  <text x="345" y="126" text-anchor="middle" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Przycisk wcisniety</text>
+
+  <rect x="620" y="100" width="170" height="40" rx="8" fill="#1E293B" stroke="#475569"/>
+  <text x="705" y="126" text-anchor="middle" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Przycisk wcisniety</text>
+
+  <rect x="112" y="308" width="130" height="48" rx="24" fill="#BE123C"/>
+  <circle cx="177" cy="332" r="18" fill="#FB7185"/>
+  <text x="270" y="338" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="20">puszczony = LOW</text>
+
+  <rect x="262" y="208" width="130" height="48" rx="24" fill="#BE123C"/>
+  <circle cx="327" cy="232" r="18" fill="#F43F5E"/>
+  <text x="408" y="238" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="20">wcisniety = HIGH</text>
+</svg>
