@@ -1,14 +1,29 @@
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { signInWithPopup } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../../firebase';
 import './auth.css';
 
 export function LoginPage() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [busy, setBusy] = useState(false);
     const [err, setErr] = useState('');
     const nav = useNavigate();
+
+    async function handleLogin() {
+        setErr('');
+        setBusy(true);
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            nav('/propozycja');
+        } catch {
+            setErr('Nieprawidłowy email lub hasło.');
+        } finally {
+            setBusy(false);
+        }
+    }
 
     async function handleGoogle() {
         setErr('');
@@ -16,8 +31,8 @@ export function LoginPage() {
         try {
             await signInWithPopup(auth, googleProvider);
             nav('/propozycja');
-        } catch (e) {
-            setErr(e instanceof Error ? e.message : String(e));
+        } catch {
+            setErr('Nie udało się zalogować przez Google.');
         } finally {
             setBusy(false);
         }
@@ -48,6 +63,8 @@ export function LoginPage() {
                                 type="email"
                                 placeholder="twoj@email.pl"
                                 autoComplete="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
                             />
                             <span className="auth-toggle" style={{ pointerEvents: 'none' }}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -69,6 +86,8 @@ export function LoginPage() {
                                 className="auth-input"
                                 type={showPassword ? 'text' : 'password'}
                                 autoComplete="current-password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
                             />
                             <button
                                 className="auth-toggle"
@@ -92,8 +111,13 @@ export function LoginPage() {
                         </div>
                     </div>
 
-                    <button className="auth-submit" type="button">
-                        Zaloguj się
+                    <button
+                        className="auth-submit"
+                        type="button"
+                        disabled={busy}
+                        onClick={handleLogin}
+                    >
+                        {busy ? 'Logowanie...' : 'Zaloguj się'}
                     </button>
                 </div>
 
