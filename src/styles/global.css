@@ -200,9 +200,16 @@ body {
   color: #fff;
   background: #a60036;
   border-radius: 0;
+  border: none;
   padding: 8px 24px;
   min-width: 142.78px;
   height: 40px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.header-cta:hover {
+  background: #8a002d;
 }
 
 .page-content {
