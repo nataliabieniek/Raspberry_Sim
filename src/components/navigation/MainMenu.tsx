@@ -1,4 +1,7 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
+import { useAuth } from '../../auth/AuthContext';
 
 const menuItems = [
   { to: '/', label: 'Home' },
@@ -12,6 +15,14 @@ const menuItems = [
 ];
 
 export function MainMenu() {
+  const { user } = useAuth();
+  const nav = useNavigate();
+
+  async function handleLogout() {
+    await signOut(auth);
+    nav('/');
+  }
+
   return (
     <div className="global-header-shell">
       <header className="global-header">
@@ -56,9 +67,15 @@ export function MainMenu() {
         </div>
 
         <div className="header-actions">
-          <NavLink to="/login" className="header-cta">
-            Zaloguj się
-          </NavLink>
+          {user ? (
+            <button className="header-cta" onClick={handleLogout}>
+              Wyloguj się
+            </button>
+          ) : (
+            <NavLink to="/login" className="header-cta">
+              Zaloguj się
+            </NavLink>
+          )}
         </div>
       </header>
     </div>
