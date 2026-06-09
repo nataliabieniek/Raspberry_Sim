@@ -234,7 +234,6 @@
 .heroImage {
   width: 100%;
   height: 1022px;
-  background-color: #e5e7eb;
   background-image: url('/hero.png');
   background-size: cover;
   background-position: center;
@@ -298,8 +297,6 @@
 .featureLabelIcon {
   width: 18px;
   height: 18px;
-  background: #A60036;
-  border-radius: 2px;
   flex-shrink: 0;
 }
 
@@ -330,9 +327,9 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  align-items: center;
+  align-items: left;
   color: #191C1E;
-  margin: 0;
+  margin: 0px 0px;
 }
 
 .featureDesc {
@@ -421,7 +418,6 @@
 .featureImage {
   width: 100%;
   height: 400px;
-  background-color: #e5e7eb;
   background-image: url('/simulator.png');
   background-size: cover;
   background-position: center;
@@ -533,6 +529,9 @@
 .ideCode .c-cyan { color: #56F5F8; }
 
 .ideText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   height: 281px;
   left: 648px;
@@ -549,7 +548,6 @@
   padding: 0px;
   gap: 16px;
   width: 100%;
-  margin-top: auto;
 }
 
 .ideSubfeature {
@@ -625,7 +623,6 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  display: flex;
   align-items: center;
   text-align: center;
   color: #FFFFFF;

@@ -45,7 +45,7 @@ export function WelcomePage() {
             <div className="featureRow">
               <div className="featureText">
                 <div className="featureLabel">
-                  <span className="featureLabelIcon" aria-hidden="true" />
+		  <img src="/cpu.svg" alt="" className="featureLabelIcon" aria-hidden="true" />
                   <span className="featureLabelText">Symulacja w czasie rzeczywistym</span>
                 </div>
                 <h2 className="featureHeading">Wirtualny Symulator</h2>
@@ -54,15 +54,15 @@ export function WelcomePage() {
                 </p>
                 <ul className="featureList">
                   <li className="featureItem">
-                    <span className="featureItemIcon" aria-hidden="true" />
+		    <img src="/check_circle.svg" alt="" className="featureLabelIcon" aria-hidden="true" />
                     <span className="featureItemText">Natychmiastowa reakcja peryferii na kod</span>
                   </li>
                   <li className="featureItem">
-                    <span className="featureItemIcon" aria-hidden="true" />
+		    <img src="/check_circle.svg" alt="" className="featureLabelIcon" aria-hidden="true" />
                     <span className="featureItemText">Dokładna mapa pinout dla Pico i Pico W</span>
                   </li>
                   <li className="featureItem">
-                    <span className="featureItemIcon" aria-hidden="true" />
+		    <img src="/check_circle.svg" alt="" className="featureLabelIcon" aria-hidden="true" />
                     <span className="featureItemText">Biblioteka 50+ komponentów: od LED po PWM</span>
                   </li>
                 </ul>
@@ -101,7 +101,7 @@ export function WelcomePage() {
 
               <div className="ideText">
                 <div className="featureLabel">
-                  <span className="featureLabelIcon" aria-hidden="true" />
+		  <img src="/dev.svg" alt="" className="featureLabelIcon" aria-hidden="true" />
                   <span className="featureLabelText">Środowisko programistyczne</span>
                 </div>
                 <h2 className="featureHeading">Interaktywne IDE</h2>
