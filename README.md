@@ -71,7 +71,7 @@ https://raspberry-sim.vercel.app/
 ### Dodanie lekcji
 ![alt text](image-8.png)
 ## Hotjar
-![alt text](image-9.png)
+![alt text](image-11.png)
 ![alt text](image-10.png)
 
 ## Google analyst
